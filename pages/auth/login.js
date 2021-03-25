@@ -4,7 +4,9 @@ import Layout from '../../components/Layout';
 const Login = () => {
     return (
         <Layout title="Login">
-            Login Page
+            <div className="container">
+                Login
+            </div>
         </Layout>
     );
 }

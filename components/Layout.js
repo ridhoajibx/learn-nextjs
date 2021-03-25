@@ -8,9 +8,11 @@ const Layout = (props) => {
                 <title>{props.title}</title>
                 <link rel='icon' href='https://tailwindcss.com/favicon-32x32.png' />
             </Head>
-            <div>
-                <Navbar />
-                { props.children }
+
+            <Navbar />
+            
+            <div className='py-5'>
+                {props.children}
             </div>
         </div>
     );

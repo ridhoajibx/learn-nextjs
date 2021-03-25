@@ -4,7 +4,9 @@ import Layout from '../../components/Layout';
 const Register = () => {
     return (
         <Layout title="Register">
-            This is register page
+            <div className="container">
+                Register
+            </div>
         </Layout>
     );
 }
