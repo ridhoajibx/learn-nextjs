@@ -28,30 +28,6 @@ export default function Show({ post }) {
     )
 }
 
-// export const getStaticPaths = async () => {
-//     const response = await fetch("http://localhost:8000/api/posts/");
-//     const posts = await response.json()
-
-//     const paths = posts.data.map((post) => (
-//         {
-//             params: { slug: post.slug }
-//         }
-//     ));
-
-//     return { paths, fallback: false };
-// }
-
-// export const getStaticProps = async (context) => {
-//     const response = await fetch(`http://localhost:8000/api/posts/${context.params.slug}`);
-//     const post = await response.json()
-
-//     return {
-//         props: {
-//             post: post.data
-//         }
-//     }
-// }
-
 export const getServerSideProps = async (context) => {
     const response = await fetch(`http://localhost:8000/api/posts/${context.params.slug}`);
     const post = await response.json()
